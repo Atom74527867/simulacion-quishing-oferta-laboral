@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oferta Laboral - Asistente Administrativo</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f2f4f8;
+    margin:0;
+}
+
+.container{
+    max-width:600px;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 0 15px rgba(0,0,0,0.1);
+}
+
+h1{
+    color:#1e3a8a;
+}
+
+.sueldo{
+    color:green;
+    font-size:22px;
+    font-weight:bold;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:8px;
+    box-sizing:border-box;
+}
+
+button{
+    width:100%;
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:15px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+#trampa{
+    display:none;
+    text-align:center;
+}
+
+.alerta{
+    color:red;
+    font-size:35px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container" id="formulario">
+
+<h1>Oferta Laboral - Trabajo Remoto</h1>
+
+<p><b>Empresa:</b> Digital Solutions Perú</p>
+<p><b>Cargo:</b> Asistente Administrativo Virtual</p>
+<p class="sueldo">S/ 2,800 mensuales</p>
+
+<p>
+Horario flexible, capacitación gratuita y posibilidad
+de crecimiento profesional.
+</p>
+
+<h2>Postula ahora</h2>
+
+<form id="miFormulario">
+
+<input type="text" placeholder="Nombres" required>
+
+<input type="text" placeholder="Apellidos" required>
+
+<input type="text" placeholder="DNI" required>
+
+<input type="tel" placeholder="Número de celular" required>
+
+<button type="submit">
+Postular ahora
+</button>
+
+</form>
+
+</div>
+
+
+<div class="container" id="trampa">
+
+<div class="alerta">
+⚠️
+</div>
+
+<h1>¡CAÍSTE EN UNA SIMULACIÓN DE PHISHING!</h1>
+
+<p>
+Esta actividad fue creada únicamente con fines educativos.
+</p>
+
+<p>
+Los datos que escribiste NO fueron guardados ni enviados
+a ningún servidor.
+</p>
+
+<p>
+Los ciberdelincuentes suelen utilizar ofertas laborales
+atractivas y códigos QR para obtener información personal.
+</p>
+
+<h3>¿Cómo protegerte?</h3>
+
+<ul style="text-align:left;">
+<li>Verifica la empresa antes de postular.</li>
+<li>No compartas información personal en sitios sospechosos.</li>
+<li>Desconfía de sueldos demasiado altos.</li>
+<li>Comprueba siempre la URL antes de ingresar datos.</li>
+<li>Ten cuidado con códigos QR desconocidos.</li>
+</ul>
+
+</div>
+
+
+<script>
+
+document.getElementById("miFormulario")
+.addEventListener("submit",function(e){
+
+    e.preventDefault();
+
+    // NO guarda nada, NO envía nada.
+    // Solo cambia la pantalla.
+
+    document.getElementById("formulario").style.display="none";
+    document.getElementById("trampa").style.display="block";
+
+});
+
+</script>
+
+</body>
+</html>
